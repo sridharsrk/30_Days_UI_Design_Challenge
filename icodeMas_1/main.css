@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #a2b2bf;
+}
+
+main{
+    background-image: url("./source/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    width: 60%;
+    padding: 100px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    color: #fdffff;
+}
+
+header h1{
+    font-size: 40px;
+}
+
+header p{
+    font-size: 13px;
+}
+
+.countdown{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.CountdownContainer{
+    padding: 20px;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9fbfc;
+    color: #2c5f6e;
+    border-radius: 10px;
+}
+
+.CountdownContainer h1{
+    font-size: 40px;
+}
+
+.CountdownContainer p{
+    font-size: 13px;
+}
+
+img{
+    width: 125px;
+}
+
+.img1, .img2{
+    position: absolute;
+    bottom: 30px;
+}
+
+.img1{
+    left: 130px;
+}
+
+.img2{
+    right: 110px;
+}
+
+
+
+@media only screen and (max-width: 1441px){
+    main{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1321px){
+    main{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1131px){
+    main{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1001px){
+    main{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 931px){
+    main{
+        background-position: center;
+    }
+
+    .countdown{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+
+    img{
+        width: 160px;
+        bottom: 60px !important;
+    }
+
+    .img1{
+        left: 70px;
+    }
+
+    .img2{
+        right: 45px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .img1{
+        left: 10px;
+    }
+    .img2{
+        right: 10px;
+    }
+}
+
+@media only screen and (max-width: 773px){
+    header h1{
+        font-size: 35px;
+    }
+
+    header p{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 703px){
+    header h1{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 633px){
+    main{
+        padding: 30px;
+    }
+
+    header h1{
+        font-size: 30px;
+    }
+
+    img{
+        width: 120px;
+    }
+}
+
+@media only screen and (max-width: 485px){
+    main{
+        z-index: -2;
+    }
+
+    header{
+        text-align: center;
+    }
+
+    header h1{
+        font-size: 20px;
+    }
+
+    img{
+        z-index: -1;
+    }
+
+    .img1{
+        bottom: 100px !important;
+        left: 5px;
+    }
+
+    .img2{
+        top: 100px;
+        right: 5px;
+    }
+}
