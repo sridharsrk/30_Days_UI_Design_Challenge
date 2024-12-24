@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans";
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+/* image container code */
+.imageContainer{
+    height: 100%;
+    width: 55%;
+    background-image: url("./source/image.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.imageContainerBall{
+    position: absolute;
+    bottom: 0;
+    right: -80px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.ball{
+    position: relative;
+    bottom: -100px;
+    height: 167px;
+    width: 167px;
+    border-radius: 50%;
+    background-image: linear-gradient(300deg, #86075181 0%, #FFD9A8 100%);
+}
+
+/* login container code */
+.loginContainer{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+/* login logo */
+.loginLogo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 320px;
+}
+
+/* login form container */
+.loginFormContainer{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* to login */
+.toLogin{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* to login title */
+.toLoginTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.toLoginTitle h1{
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.toLoginTitle p{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* login form */
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* google button */
+.continueWithGoogle button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 100%;
+    gap: 1rem;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 0 2px 1px #E8E8E8;
+    border-radius: 5px;
+}
+
+/* option gap */
+.optionGap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionGap p{
+    font-size: 12px;
+    font-weight: 600;
+    color: #A1A1A1;
+}
+
+/* email */
+.continueWithEmail form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.emailInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.getEmail, .getPassword{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.getEmail label, .getPassword label{
+    color: #828282;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.getEmail input, .getPassword input{
+    width: 100%;
+    height: 45px;
+    border: 2px solid #DED2D9;
+    border-radius: 5px;
+}
+
+.posswordOptions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* rememberme */
+.rememberMe{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.rememberMe input{
+    width: 17px;
+    height: 17px;
+    border-radius: 0;
+}
+
+.rememberMe label{
+    color: #A1A1A1;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.forgotPassword a{
+    text-decoration: none;
+    color: #7F265B;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* submit button */
+.formSubmit button{
+    height: 50px;
+    width: 100%;
+    border: none;
+    background-color: #7F265B;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 6px;
+}
+
+/* toRegister option */
+.toRegister{
+    font-size: 16px;
+}
+
+.toRegister a{
+    text-decoration: none;
+    color: #828282;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.toRegister a span{
+    color: #7F265B;
+}
+
+@media (max-width: 1000px){
+    .imageContainer{
+        width: 50%;
+    }
+
+    .loginContainer{
+        width: 50%;
+    }
+}
+
+@media (max-width: 901px){
+    .imageContainer{
+        width: 45%;
+    }
+
+    .loginContainer{
+        width: 55%;
+    }
+}
+
+@media (max-width: 801px){
+    .imageContainer{
+        display: none;
+    }
+
+    .loginContainer{
+        width: 100%;
+    }
+}
+
+@media (max-width: 410px){
+    .loginContainer{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .loginLogo{
+        margin-right: 250px;
+    }
+
+    .toLoginTitle h1{
+        font-size: 25px;
+    }
+
+    .toLoginTitle p{
+        font-size: 12px;
+    }
+}
