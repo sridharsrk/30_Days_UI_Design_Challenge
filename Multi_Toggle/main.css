@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #22242c;
+}
+
+.userSettingsContainer{
+    position: relative;
+    padding: 40px;
+    background-color: #1b1d25;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 8px;
+}
+
+.close{
+    display: none;
+}
+
+.userSettingsContainerTerminator{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: #16181f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    color: #9298ad;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header h3{
+    font-size: 23px;
+}
+
+.header p{
+    font-size: 18px;
+    width: 350px;
+    text-align: center;
+}
+
+.userInputContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 45px;
+    border-radius: 5px;
+    border: none;
+}
+
+.option p{
+    font-size: 18px;
+}
+
+.on{
+    color: white;
+    border: 2px solid #b02342;
+    box-shadow: 0 0 0 5px #402631;
+    background-color: #16181f;
+}
+
+.off{
+    background-color: #16181f;
+    color: #585c6e;
+}
+
+
+.submissionContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.sb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 2px solid #0c0d11;
+    background-color: #1b1d25;
+    color: #585c6e;
+    font-size: 17px;
+}
+
+.sb:hover{
+    background-color: #c74063;
+    color: white;
+    border: none;
+}
+
+@media only screen and (max-width: 850px){
+    .userInputContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 590px){
+    body{
+        height: 150vh;
+    }
+
+    .userInputContainer{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 470px){
+
+    .userSettingsContainer{
+        width: 95%;
+        padding: 60px 40px;
+    }
+
+    .header p{
+        width: 95%;
+    }
+
+    .userInputContainer{
+        width: 100%;
+    }
+
+    .option{
+        width: 100%;
+    }
+}
