@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body{
+    background-color: #cdced1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 2rem;
+}
+
+.totalStorage{
+    background-color: #EBEBEB;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.totalStorageBackground{
+    position: absolute;
+    top: -13px;
+    left: 8px;
+    width: 95%;
+    height: 100%;
+    z-index: -1;
+    background-color: #bfbfc183;
+    border-radius: 1rem;
+    border: 1px solid white;
+}
+
+.totalStorageHead{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.returnToSourcePage{
+    padding: 5px;
+    background-color: #FEFEFE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.totalStorageHead p{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.totalStorageDetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.chart{
+    width: 150px;
+    height: 150px;
+    background: conic-gradient(#424FC1 35deg, #A0CCE2 37deg);
+    border-radius: 100px;
+}
+
+.chartDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.totalStoage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.totalStoage p{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.usedStorage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.usedStorage p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #424FC1;
+}
+
+.moreDetailsAboutStorage button{
+    padding: 10px 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.otherPlans{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.otherPlans ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.plans{
+    background-color: #ebebeb;
+    padding: 40px;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 3rem;
+}
+
+.planeDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.storageSpace{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.topLine{
+    display: flex;
+    width: 20px;
+    height: 5px;
+    background-color: #8BA4E9;
+    border-radius: 50rem;
+}
+
+.planeTotalStoage{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.currentStatus p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ececec;
+}
+
+.planePrice{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: end;
+}
+
+.planePrice button{
+    padding: 10px 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 130px;
+}
+
+.planePrice a{
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: #424FC1;
+    text-decoration: none;
+}
+
+.otherPlansBackground{
+    position: absolute;
+    top: -60px;
+    left: 10px;
+    width: 94%;
+    height: 120%;
+    z-index: -1;
+    background-color: #bfbfc183;
+    border-radius: 1rem;
+    border: 1px solid white;
+    padding: 20px 0 0 20px;
+}
+
+.otherPlansBackground p{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* plans element removing code */
+.plans-1{
+    background-color: #000000;
+}
+
+.planePrice-1{
+    display: none;
+}
+
+.topLine-1{
+    background-color: #ec9f69;
+}
+
+.planeTotalStoage-1{
+    color: white;
+}
+
+.currentStatus-2, .currentStatus-3{
+    display: none;
+}
+
+@media  only screen and (max-width: 768px){
+    .totalStorage{
+        padding: 20px;
+    }
+
+    .totalStorageDetails{
+        gap: 0.5rem;
+    }
+
+    .chart{
+        width: 100px;
+        height: 100px;
+    }
+
+    .totalStorageHead p{
+        font-size: 0.8rem;
+    }
+
+    .totalStoage p, .usedStorage p{
+        font-size: 0.6rem;
+    }
+
+    .moreDetailsAboutStorage button{
+        font-size: 0.6rem;
+    }
+
+    .plans{
+        padding: 20px;
+        gap: 1rem;
+    }
+
+    .planeTotalStoage{
+        font-size: 0.8rem;
+    }
+
+    .currentStatus p{
+        font-size: 0.6rem;
+    }
+
+    .planePrice button{
+        font-size: 0.5rem;
+    }
+
+    .planePrice a{
+        font-size: 0.4rem;
+    }
+
+    .otherPlansBackground p{
+        font-size: 0.6rem;
+    }
+    
+}
