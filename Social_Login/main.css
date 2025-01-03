@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #F2F8FD;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #3759CD;
+    width: 800px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 15px #DCE6FA;
+}
+
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.loginContainerHead{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.loginContainerHead h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FDFDFF;
+}
+
+.loginContainerHead p{
+    font-size: 0.9rem;
+    color: #F3FEFF;
+    width: 300px;
+}
+
+.loginForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    height: 50px;
+    background-color: #7F96DE;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.loginInput{
+    width: 70%;
+    margin-left: 10px;
+}
+
+.loginForm input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #7F96DE;
+}
+
+.loginForm input::placeholder{
+    color: #EDEEFF;
+    font-size: 15px;
+}
+
+.loginForm input:focus{
+    outline: none;
+    border: none;
+}
+
+.loginForm button{
+    background-color: #FFFFFD;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.images{
+    position: absolute;
+    bottom: -30px;
+}
+
+.images ul{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.images ul li{
+    list-style-type: none;
+    width: 60px;
+    height: 60px;
+    background-color: white ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease 0s;
+}
+
+.images ul li img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.images ul li:hover{
+    transform: translateY(-10px);
+}
+
+@media only screen and (max-width: 768px){
+    main{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .img-5{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    main{
+        padding: 20px;
+    }
+
+    .img-4{
+        display: none !important;
+    }
+
+    .loginForm{
+        width: 260px;
+    }
+
+    .loginContainerHead p{
+        width: 250px;
+    }
+}
