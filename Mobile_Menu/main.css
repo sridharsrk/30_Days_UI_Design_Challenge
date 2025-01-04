@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f1f1f1;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.menuContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 20px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.userDetails{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    height: 100px;
+    z-index: 1;
+}
+
+.userDetails::after{
+    content: '';
+    background-color: #6382d5;
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    height: 160px;
+    transform: rotate(-10deg);
+    width: calc(100% + 55px);
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.userImage img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px #6f89d2;
+}
+
+.userdetail{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.userdetail h3{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.userdetail p{
+    color: #dee5fd;
+    font-size: 0.8rem;
+}
+
+.addNewOption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addNewOption button{
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #628dff;
+    color: white;
+    padding: 5px;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    transition: transform 0.3s ease 0s;
+}
+
+.addNewOption button:hover{
+    transform: translateY(-2px);
+}
+
+.menuOptions ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.menuOptions ul li{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 13px;
+    gap: 20px;
+}
+
+.menuOptions ul li:hover::before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    background-color: #628dff;
+    position: absolute;
+    left: -20px;
+    animation: select 0.3s ease;
+    color: #628dff;
+}
+
+@keyframes select{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.menuContainer{
+    display: none;
+}
+
+.menuControler{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.active{
+    display: flex;
+}
+
+.closeMenu{
+    display: none;
+}
+
+.text p{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
