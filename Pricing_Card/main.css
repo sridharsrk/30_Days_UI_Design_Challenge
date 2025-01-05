@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #b02831;
+    color: #b3a9ac;
+    font-family: 'Nunito';
+}
+
+.purchasePlanes{
+    display: flex;
+    gap: 4.5rem;
+    background-color: #22161a;
+    padding: 100px;
+    position: relative;
+    box-shadow: 0 20px 8px -10px #540509;
+    transform-style: preserve-3d;
+}
+
+.purchasePlanes::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 100px);
+    background-color: #a0171ecc;
+    bottom: -250px;
+    left: -50px;
+    perspective: 1000px;
+    transform: translateZ(-250px) rotateX(100deg);
+    border-radius: 50%;
+}
+
+.basicPlane, .proPlane{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.planetitleAndInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.planeTitle {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.planeInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.planeInfo h3{
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.planeInfo p{
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.planeOtherDetails ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-left: 15px;
+}
+
+.planeOtherDetails ul li{
+    font-size: 15px;
+    font-weight: 300;
+    opacity: 0;
+    animation: slideIn 2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    25%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+}
+
+.purchaseButtton button{
+    border: 0;
+    background-color: #b02831;
+    width: calc(100% + 20px);
+    height: 45px;
+    color: white;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 100;
+    transition: all ease 1s;
+}
+
+.purchaseButtton button:hover{
+    transform: translateY(-10px);
+    border: 1px solid #b02831;
+    background-color: #22161a;
+    color: #b02831;
+}
+
+hr{
+    height: 100%;
+    border: 1px solid #2c2024;
+}
+
+@media only screen and (max-width: 767px){
+    body{
+        height: auto;
+        margin: 50px 0;
+    }
+
+    .purchasePlanes{
+        flex-direction: column;
+    }
+
+    hr{
+        width: 100%;
+    }
+
+    .purchasePlanes::after{
+        /* display: none; */
+        bottom: -500px;
+        transform: translateZ(-500px) rotateX(95deg);
+        width: 100%;
+        left: 0;
+        bottom: -480px;
+    }
+}
+
+@media only screen and (max-width: 395px){
+    .purchasePlanes{
+        padding: 70px;
+        width: 95%;
+    }
+
+    .purchaseButtton button{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .purchasePlanes::after{
+        bottom: -450px;
+    }
+}
