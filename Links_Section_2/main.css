@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #E7E8EC;
+    margin: 100px 0 100px 0;
+}
+
+main{
+    background-color: #ffffff;
+    padding: 60px;
+    box-shadow: 0 0 10px 0 rgb(215, 215, 215);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.title{
+    width: 70%;
+}
+
+.title p{
+    font-size: 23px;
+    font-weight: 700;
+}
+
+
+.servicesAndBlogConatiner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.servicesContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.8rem;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 20px;
+    width: 300px;
+    text-decoration: none;
+    color: black;
+    background-size: 200%;
+    background-image: linear-gradient(90deg, #ffbb01 50%, white 50%);
+    border-radius: 8px;
+    background-position: 100%;
+}
+
+.service:hover{
+    animation: serviceHover 1s ease;
+    background-position: 0%;
+}
+
+@keyframes serviceHover{
+    from{
+        background-position: 100%;
+    }
+
+    to{
+        background-position: 0%;
+    }
+}
+
+.service-icon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ffbb01;
+}
+
+.service-icon svg{
+    width: 20px;
+    height: 20px;
+}
+
+.service h3{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.service p{
+    font-size: 13px;
+}
+
+
+
+
+.blogContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgb(231, 231, 231);
+    width: 300px;
+    border-radius: 10px;
+}
+
+.blogContainer h1{
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.blog{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 0.3rem;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.blog:hover{
+    background-color: #f1f2f6;
+}
+
+.blog h3{
+    font-size: 13px;
+}
+
+.blog p{
+    font-size: 12px;
+    color: #ffbb01;
+}
+
+@media only screen and (max-width: 768px){
+    .servicesContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
