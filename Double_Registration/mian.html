@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Double_Registration</title>
+</head>
+<body>
+    <main>
+        <section class="first-box">
+            <div class="top">
+                <h2>Registrations Open!</h2>
+                <p>2018 - 2019</p>
+            </div>
+            <div class="first-box-p">
+                <p>Register and upload your design today to know how good your design is: get a complimentary preliminary score.</p>
+            </div>
+            <button type="submit">SUBMIT NOW</button>
+        </section>
+        <section class="second-box">
+            <div class="second-box-top">
+                <div class="first">
+                    <h2>Registration Open!</h2>
+                    <p>2018 - 2019</p>
+                </div>
+                <p class="ptag">Register and upload your design today to know how good your design is: get a complimentary preliminary score.</p>
+            </div>
+            <div class="submitButton">
+                <button type="submit">SUBMIT NOW</button>
+            </div>
+        </section>
+    </main>
+
+
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript">
+	    VanillaTilt.init(document.querySelector(".your-element"), {
+		max: 25,
+		speed: 400
+	});
+	
+	
+	VanillaTilt.init(document.querySelectorAll(".first-box"));
+    VanillaTilt.init(document.querySelectorAll(".second-box"));
+</script>
+</body>
+</html>
