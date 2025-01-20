@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Share</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="smsContainer">
+        <div class="closeTheContainer" onclick="closeTheSmsContainer()">
+            <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#b7b7b7"></path> </g></svg>
+        </div>
+
+        <div class="smsContainerInfoAndInput">
+            <h2>Send install link to mobile device</h2>
+            <p>Send via SMS or visit the private URL on the mobile device to install this app directly to the device</p>
+            <form>
+                <div class="dropdown">
+                    <select required>
+                        <option value="" disabled selected></option>
+                        <option value="IN">IN</option>
+                        <option value="RU">RU</option>
+                        <option value="CN">CN</option>
+                        <option value="UK">UK</option>
+                        <option value="US">US</option>
+                    </select>
+                    <input type="tel" placeholder="Enter mobile number" pattern="[0-9]{10,}" minlength="10" maxlength="10" required>
+                </div>
+
+                <div class="Button">
+                    <button type="submit">Send</button>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- smsSharingLinkContainer -->
+        <div class="smsSharingLinkContainer">
+            <div class="smsSharingLinkContainerTop">
+                <h3>SHARE LINK</h3>
+            </div>
+
+            <div class="smsSharingLinkContainerBottom">
+                <a href="#">http://www.staggeringbeauty.com/</a>
+                <p>Copy</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

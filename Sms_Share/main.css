@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.smsContainer{
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    box-shadow: 0px 0px 10px 5px #e5f0ec;
+}
+
+.closeTheContainer{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.smsContainerInfoAndInput{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.smsContainerInfoAndInput h2{
+    font-weight: 700;
+    font-size: 25px;
+    color: #515151;
+}
+
+.smsContainerInfoAndInput p{
+    font-weight: 400;
+    font-size: 17px;
+    color: #515151;
+    width: 530px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 55px;
+    border-radius: 8px;
+}
+
+.dropdown{
+    display: flex;
+    width: 100%;
+    background-color: #f1f1f1;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    padding-left: 20px;
+}
+
+.dropdown{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.dropdown select{
+    border: none;
+    background-color: #f1f1f1;
+}
+
+.dropdown input{
+    width: 100%;
+    border: none;
+    background-color: #f1f1f1;
+    font-size: 17px;
+}
+
+.dropdown input:focus, .dropdown select:focus{
+    outline: none;
+    border: none;
+}
+
+.Button button{
+    height: 65px;
+    width: 100px;
+    background-color: #4392f5;
+    border: none;
+}
+
+.smsSharingLinkContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.smsSharingLinkContainerTop h3{
+    font-size: 18px;
+    color: #4d4d4d;
+}
+
+.smsSharingLinkContainerBottom{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.smsSharingLinkContainerBottom a{
+    text-decoration: none;
+    color: #5b5b5b;
+}
+
+.smsSharingLinkContainerBottom p{
+    color: #7fabfd;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 530px){
+    
+}
+
+@media only screen and (max-width: 660px){
+    .smsContainer{
+        width: 95%;
+    }
+
+    .smsContainerInfoAndInput p{
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 520px){
+    form{
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+        border-radius: 0px;
+    }
+
+    .dropdown{
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .Button{
+        width: 100%;
+    }
+
+    .Button button{
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .smsSharingLinkContainer{
+        align-items: self-start;
+    }
+
+    .smsSharingLinkContainerBottom{
+        flex-direction: column;
+    }
+}
+
