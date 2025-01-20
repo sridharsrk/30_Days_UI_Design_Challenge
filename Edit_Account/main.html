@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Account</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <form class="accountEditingContainer">
+        <div class="accountEditingContainerHead">
+            <h3>Edit Your Account</h3>
+            <svg width="20px" height="20px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#585a7b" d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"></path></g></svg>
+        </div>
+
+        <div class="accountEditingContainerForm">
+            <div class="nameContainer inputContainer">
+                <label for="name">NAME</label>
+                <input autocomplete="off" required type="text" id="name" placeholder="Enter your name">
+            </div>
+
+            <div class="emailContainer inputContainer">
+                <label for="email">EMAIL</label>
+                <input autocomplete="off" required type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="dobContainer inputContainer">
+                <label for="dob">DATE OF BIRTH</label>
+                
+                <div class="dobContainerInputs">
+                    <div class="monthInput">
+                        <input pattern="[1-12]" type="text" id="dob" placeholder="Month" autocomplete="off" required>
+                    </div>
+    
+                    <div class="dateInput">
+                        <input pattern="[1-31]" type="text" id="dob" placeholder="Date" autocomplete="off" required>
+                    </div>
+    
+                    <div class="yearInput">
+                        <input type="text" id="dob" placeholder="Year" pattern="19[0-9]{2}|20[0-2][0-5]" autocomplete="off" required>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="accountEditingContainerFooter">
+            <button type="reset">
+                <p>Cancel</p>
+            </button>
+            <button type="submit">
+                <p>Save</p>
+            </button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #252746;
+}
+
+.accountEditingContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #303057;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px #222338;
+    overflow: hidden;
+}
+
+.accountEditingContainerHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2b4f;
+    padding: 20px 20px;
+}
+
+.accountEditingContainerHead h3{
+    color: #dcddff;
+    font-size: 1rem;
+    font-weight: 600;    
+}
+
+.accountEditingContainerHead svg{
+    cursor: pointer;
+}
+
+/* accountEditingContainerForm */
+.accountEditingContainerForm{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 25px;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputContainer label{
+    color: #dcddff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #a9a9d0;
+}
+
+.dobContainerInputs{
+    display: flex;
+    gap: 0.5rem;
+}
+
+input{
+    border: 1px solid #4a4b71;
+    background-color: #303057;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    color: #7a7ba1;
+}
+
+.dobContainerInputs input{
+    width: 100%;
+    width: 110px;
+}
+
+/* accountEditingContainerFooter */
+.accountEditingContainerFooter{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #2a2b4f;
+    gap: 0.8rem;
+}
+
+.accountEditingContainerFooter button{
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #34355b;
+    position: relative;
+    overflow: hidden
+}
+
+button p{
+    position: relative;
+    z-index: 2
+}
+
+.accountEditingContainerFooter button::after{
+    content: "";
+    position: absolute;
+    background-color: #f27363;
+    right: -90px;
+    bottom: -220px;
+    width: 150px;
+    height: 260px;
+    transform: rotate(45deg) translateX(-0%);
+}
+
+button:hover::after{
+    animation: buttonAnimation 1s ease-in-out;
+    transform: rotate(45deg) translateX(-140px);
+}
+
+@keyframes buttonAnimation {
+    0%{
+        transform: rotate(45deg) translateX(-1px);
+    }
+    100%{
+        transform: rotate(45deg) translateX(-140px);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .accountEditingContainer{
+        width: 95%;
+    }
+
+    .dobContainerInputs input{
+        width: 100%;
+    }
+}
