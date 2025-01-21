@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+body{
+    background-color: #15191f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 20px 0 20px 0;
+}
+
+.offerContainer{
+    background-color: #232832;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    box-shadow: 0 0 0 15px #14181d;
+    border-radius: 3px;
+}
+
+.logo img{
+    width: 150px;
+    height: 120px;
+}
+
+/* offer container content */
+.offerContainerContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.aboutOffer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+    color: white;
+}
+
+.aboutOffer p{
+    width: 300px;
+}
+
+.aboutOffer button{
+    padding: 10px;
+    width: 150px;
+    border-radius: 20px;
+    color: black;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.aboutOffer button:hover{
+    animation: bounce 1s ease;
+    background-color: #1d222c;
+    color: white;
+    border: 1px solid white;
+    transition: all 1s ease;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
+.specialOffer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #dbe1e6;
+    background-color: #1d222c;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.specialOffer h4{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.specialOffer p{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.aboutSpecialOffer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media only screen and (max-width: 665px) {
+    .offerContainer{
+        padding: 30px;
+        width: 95%;
+    }    
+}
+
+@media only screen and (max-width: 350px) {
+    .offerContainer{
+        padding: 20px;
+    }
+
+    .aboutOffer p{
+        width: auto;
+    }
+
+    .specialOffer{
+        padding: 20px;
+    }
+}
