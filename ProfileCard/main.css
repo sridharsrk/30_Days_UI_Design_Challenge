@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 10px 0;
+    background-color: #28223f;
+}
+
+main{
+    background-color: #231e39;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 20px;
+    width: 370px;
+    box-shadow: 5px 20px 30px 1px #1a152c;
+}
+
+.profileContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.profileImage{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.profileType{
+    background-color: #febb0b;
+    display: flex;
+    align-self: start;
+    padding: 5px;
+    border-radius: 8%;
+}
+
+.profileType p{
+    color: #231e39;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.profileImageContainer{
+    border: 2px solid #30596f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+}
+
+.profileImageContainer img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.profileDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profileDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    color: #c6c6e3;
+    text-align: center;
+}
+
+.profileName{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.profileLocation{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profileDomine{
+    font-size: 14px;
+    font-weight: 400;
+    width: 200px;
+}
+
+.profileContact{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.profileContact a{
+    border: none;
+    background-color: #03bfcb;
+    color: white;
+    width: 130px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileContact button:hover{
+    background-color: #251e38;
+    color: #30596f;
+    border: 3px solid #30596f;
+    transition: all 1s ease-in-out;
+}
+
+.skillsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+    color: #c6c6e3;
+}
+
+.skillsContainer p{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+
+.skills li{
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #c6c6e3;
+    padding: 10px;
+}
+
+@media screen and (max-width: 400px){
+    main{
+        width: 95%;
+    }
+}
