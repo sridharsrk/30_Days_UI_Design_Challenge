@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: linear-gradient(175deg, #e36a7c 30%, #f7f7f7 30%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topListContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.topListTitle{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    width: 90%;
+}
+
+.titleContent{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    color: #f7f7f7;
+}
+
+.titleContent h1{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.titleContent p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.topList ol{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 40px 0;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.topList ol li{
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+}
+
+.topList ol li:hover{
+    transform: scale(1.001);
+    box-shadow: 0 5px 10px 0 rgba(237, 236, 236, 0.5);
+    transition: all 0.3s ease;
+}
+
+.songDetails{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.songImage{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.songImage img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.songImage p{
+    font-size: 15px;
+    font-weight: 600;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #afafaf;
+}
+
+.songContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.songContent h2{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.songContent p{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.viewsOFSongs p{
+    font-size: 13px;
+    font-weight: 400;
+    color: #606060;
+}
+
+@media screen and (max-width: 820px) {
+    .topListContainer{
+        width: 100%;
+    }
+
+    .topList{
+        width: 90%;
+    }
+
+    .topList ol li{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .topList{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .topListTitle{
+        flex-direction: column;
+    }
+
+    .songDetails{
+        flex-direction: column;
+    }
+
+    .viewsOFSongs{
+        display: flex;
+    }
+
+    .songContent{
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .songContent{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
