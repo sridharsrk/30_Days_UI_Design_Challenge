@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 20px 0;
+    background-color: #7ac0e1;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutUserContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px 40px 60px 40px;
+    width: 320px;
+    animation: leftToRight 1s ease;
+}
+
+@keyframes leftToRight{
+    0%{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+}
+
+.userImage img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.aboutUser{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.userNameAndRoll{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.userName{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.userRoll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #51ace6;
+    border: 2px solid #51ace6;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.userRoll:hover{
+    color: white;
+    background-color: #51ace6;
+    transition: all 0.5s ease;
+}
+
+.userSummery{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.userSummery p{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* chart code start from here */
+.userProjectStatus{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: #26343d;
+    padding: 25px 10px;
+    color: #f1fcfd;
+    animation: rightToLeft 1s ease;
+}
+
+@keyframes rightToLeft{
+    0%{
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+}
+
+.projectStatusTitle p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.chart{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    border-radius: 50%;
+    background-image: conic-gradient(#0cdfba 0% 53%, #f1ba00 53% 61%, #7661f1 61% 100%);
+}
+
+.projectStatusInChart{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #24353d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+}
+
+.totalCount{
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    color: white !important;
+}
+
+.projectStatusInChart p{
+    font-size: 15px;
+    font-weight: 500;
+    color: #90a1a9;
+}
+
+.projectStatusInText{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px #16212685;
+    border-radius: 20px;
+}
+
+.StatusInTextContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.count{
+    font-size: 20px;
+    font-weight: 600;
+    color: #f1fcfd;
+}
+
+.StatusInTextContainer p:nth-child(2){
+    font-size: 15px;
+    font-weight: 500;
+    color: #90a1a9;
+}
+
+.label{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 3px;
+}
+
+.completedLabel{
+    background-color: #0cdfba;
+}
+
+.overdueLabel{
+    background-color: #f1ba00;
+}
+
+.inProgressLabel{
+    background-color: #7661f1;
+}
+
+@media screen and (max-width: 350px){
+    .aboutUserContainer{
+        width: 100%;
+    }
+
+    .userProjectStatus{
+        width: 100%;
+    }
+
+    .projectStatusInText {
+        padding: 10px;
+        gap: 20px;
+    }
+}
