@@ -1,0 +1,256 @@
+:root{
+    --backgroundColor: #1a2042;
+    --button: #303864;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a2042;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%;
+    margin: 20px 0;
+    color: var(--backgroundColor);
+}
+
+main{
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px #69696990;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 400px;
+    max-width: 100%;
+}
+
+.title h2{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+label{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+input{
+    height: 35px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.formButtons{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.add, .reset{
+    display: flex;
+    gap: 1rem;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+    width: 100%;
+}
+
+.add{
+    background-color: #7F3DFF;
+}
+
+.reset{
+    background-color: #EEE5FF;
+    color: #7F3DFF;
+}
+
+.totalCost{
+    width: 100%;
+}
+
+.totalCost h3{
+    display: flex;
+    gap: 0.2rem;
+    padding: 0 10px;
+    font-size: 17px;
+}
+
+/* itemsBought */
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.itemsBought{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.itemsBoughtContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.itemsBoughtTitleAndCheckoutButton{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#checkout{
+    width: 110px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7F3DFF;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+}
+
+.itemsBoughtList{
+    list-style: none;
+    /* padding-left: 10px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-height: 200px;
+    overflow-x: auto;
+}
+
+.itemsBoughtList li{
+    border-radius: 10px;
+    color: var(--button);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.itemsBoughtList li:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    .contentContainer{
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+.changeTheColor, .changeTheColor .contentContainer{
+    background-color: #007BFF !important;
+}
+
+.contentContainer{
+    display: flex;
+    background-color: #f5f5f6;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contentContainer p{
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.itemsName{
+    max-width: 100%;
+    width: 130px;
+}
+
+.price{
+    max-width: 100%;
+}
+
+.otherOptionsContainer{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.otherOptionsContainer button{
+    display: none;
+    border: none;
+    background-color: #EEE5FF;
+    color: #7F3DFF;
+    width: 70px;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0px;
+    cursor: pointer;
+}
+
+.otherOptionsContainer button:hover{
+    background-color: #7F3DFF;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.checkoutButton{
+    display: none;
+}
+
+#deleteAll{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FD3C4A;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+}

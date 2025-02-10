@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <main>
+        <div class="title">
+            <h2>Expense Tracker</h2>
+        </div>
+
+        <form>
+            <div class="itemNameContainer inputContainer">
+                <label for="itemName">Item Name</label>
+                <input autocomplete="off" required id="itemName" type="text">
+            </div>
+
+            <div class="itemPriceContainer inputContainer">
+                <label for="Item_Price">Item Price (₹):</label>
+                <input autocomplete="off" required id="Item_Price" type="number" min="1" value="1">
+            </div>
+
+            <div class="formButtons">
+                <button class="add" type="button" onclick="addTheItem()">Add Expense</button>
+                <button class="reset" type="reset">Reset</button>
+            </div>
+        </form>
+
+        <div class="totalCost">
+            <h3>Total Cost: ₹<span class="total">0</span></h3>
+        </div>
+
+        <div class="itemsBought">
+            <div class="itemsBoughtContainer">
+                <div class="itemsBoughtTitleAndCheckoutButton">
+                    <h3>Items Bought</h3>
+                    <button id="checkout" onclick="checkoutTheItems()">Checkout</button>
+                </div>
+
+                <ul class="itemsBoughtList"></ul>
+            </div>
+
+            <div class="deleteAndStoringData">
+                <button onclick="deleteAllTheItem()" id="deleteAll">Delete All</button>
+            </div>
+        </div>
+    </main>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
