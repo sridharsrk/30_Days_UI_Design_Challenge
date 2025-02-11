@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #13183f;
+    margin: 30px 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #1b225d;
+    box-shadow: 0px 0px 30px 0px #13183f;
+    align-items: center;
+    color: white;
+}
+
+.title{
+    background-color: #161b4e;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px;
+}
+
+.title h3{
+    font-size: 15px;
+    font-weight: 500;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+}
+
+.graphAndGraphDetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 40px 50px;
+}
+
+.graphDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+}
+
+.graphDetail {
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+}
+
+.graphDetailPersentage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    width: 60px;
+    border-radius: 20px;
+}
+
+.graphDetailPersentage p{
+    font-size: 15px;
+    color: black;
+    font-weight: 600;
+}
+
+.name{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.graphDetailPersentage-1{
+    background-color: #b968c8;
+}
+
+.graphDetailPersentage-2{
+    background-color: #ed427b;
+}
+
+.graphDetailPersentage-3{    
+    background-color: #ef6c00;
+}
+
+.graphDetailPersentage-4{
+    background-color: #fed740;
+}
+
+.graphDetailPersentage-5{
+    background-color: #6af0ae;
+}
+
+canvas{
+    width: 300px !important;
+    height: 300px !important;
+}
+
+.chartContainer{
+    position: relative;
+}
+
+.content{
+    position: absolute;
+    top: 100px;
+    left: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+}
+
+.content h3{
+    font-size: 60px;
+    font-weight: 600;
+    text-shadow: black 2px 5px 1px;
+}
+
+.content p{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 780px){
+    .graphAndGraphDetails{
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .title{
+        padding: 20px 0;
+    }
+
+    .graphAndGraphDetails{
+        padding: 40px 30px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .graph{
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+    .content{
+        top: 90px;
+        left: 80px;
+    }
+}
