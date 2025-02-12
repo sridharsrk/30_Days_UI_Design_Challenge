@@ -1,0 +1,181 @@
+:root{
+    --b1: red;
+    --b2: red;
+    --b3: red;
+    --b4: red;
+    --b5: red;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #e8ebf3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 20px 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.title  p{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.generatedColors{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.colorContainer{
+    height: 250px;
+    width: 150px;
+    background-color: #ffffff;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.colorContainer:hover{
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px 0 #bababa;
+    transition: all 0.5s ease;
+}
+
+.color{
+    height: 195px;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.background {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateX(-100%) translateY(-100%);
+    animation: newColor 1s ease forwards;
+}
+
+.background-1 {
+    background-color: var(--b1);
+}
+
+.background-2 {
+    background-color: var(--b2);
+}
+
+.background-3 {
+    background-color: var(--b3);
+}
+
+.background-4 {
+    background-color: var(--b4);
+}
+
+.background-5 {
+    background-color: var(--b5);
+}
+
+
+@keyframes newColor {
+    to {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+
+.colorCode p{
+    font-size: 15px;
+}
+
+.color-1{
+    background-color: #EEEDF0;
+}
+
+.color-2{
+    background-color: #A1B5c1;
+}
+
+.color-3{
+    background-color: #f9aca7;
+}
+
+.color-4{
+    background-color: #68747d;
+}
+
+.color-5{
+    background-color: #cf365f;
+}
+
+
+
+.generateButton{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.generateButton button{
+    width: 300px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7e6ccb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.generateButton button:hover{
+    color: black;
+    background-color: #8d7ae4ba;
+    transition: all 0.5s ease;
+}
+
+.generateButton p{
+    font-size: 15px;
+    text-align: center;
+}
+
+.indicator{
+    border-radius: 50px;
+    padding: 10px 30px;
+    display: none;
+}
+
+.copyIndicator{
+    background-color: #fffffe;
+    bottom: 0;
+}
+
+.copyedIndicator{
+    background-color: #0c1227;
+    color: white;
+    top: 15%;
+    position: fixed;
+    top: 20px;
+}
