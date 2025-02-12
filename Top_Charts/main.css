@@ -61,6 +61,7 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 800px;
+    cursor: pointer;
 }
 
 .topList ol li:hover{
